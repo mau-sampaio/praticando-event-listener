@@ -30,17 +30,14 @@ window.addEventListener("load", () => {
     }
 
     const nome = document.querySelector("#name")
-    let contador = 0;
 
     nome.addEventListener("keyup",(event)=>{
         document.querySelector("#dadosTecla").innerText = event.target.value
-        contador = contador + 1; 
-        document.querySelector("#qtdTecla").innerText = contador;
+        document.querySelector("#qtdTecla").innerText = event.target.value.length;
     })
 
     document.querySelector("input[type=reset]").addEventListener("click",()=>{
         document.querySelector("#dadosTecla").innerText = "";
-        contador = 0;
         document.querySelector("#qtdTecla").innerText = "";
     })
 
